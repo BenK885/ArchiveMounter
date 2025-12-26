@@ -10,7 +10,7 @@ public class AppDelegate: NSObject, NSApplicationDelegate {
     public func applicationDidFinishLaunching(_ aNotification: Notification) {
         /* Check if FUSE for macOS installation is present */
         let manager: FileManager = FileManager.default
-        guard manager.fileExists(atPath: "/Library/Filesystems/osxfuse.fs/Contents/Resources/mount_osxfuse") else {
+        guard manager.fileExists(atPath: "/Library/Filesystems/macfuse.fs/Contents/Resources/mount_macfuse") else {
             let alert: NSAlert = NSAlert()
             alert.alertStyle = .critical
             alert.messageText = "FUSE for macOS is not installed"
